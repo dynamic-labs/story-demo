@@ -2,6 +2,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { DynamicContextProvider } from "@dynamic-labs/sdk-react-core";
 import { EthereumWalletConnectors } from "@dynamic-labs/ethereum";
+import { GlobalWalletExtension } from "@dynamic-labs/global-wallet";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -51,6 +52,7 @@ export default function RootLayout({ children }) {
           settings={{
             environmentId: "2995b456-45c1-4326-af24-5f9fca2214cf",
             walletConnectors: [EthereumWalletConnectors],
+            walletConnectorExtensions: [GlobalWalletExtension],
             overrides: {
               evmNetworks
             }
