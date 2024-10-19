@@ -2,11 +2,11 @@ import Image from "next/image";
 import { DynamicWidget } from "@dynamic-labs/sdk-react-core";
 
 export default function Home() {
+
   return (
     <div className="flex flex-col items-center justify-center min-h-screen p-8 font-[family-name:var(--font-geist-sans)] bg-[rgb(241,244,244)] bg-opacity-100">
       <main className="flex flex-col gap-8 items-center text-center">
         <Image
-          className="dark:invert"
           src="/images/Story_Black.svg"
           alt="Story Protocol logo"
           width={180}
@@ -14,7 +14,6 @@ export default function Home() {
           priority
         />
         <h1 className="text-2xl font-bold">Welcome to Story Protocol Dynamic Demo</h1>
-        <p className="text-lg">Log in to get started</p>
         <DynamicWidget />
       </main>
     </div>
